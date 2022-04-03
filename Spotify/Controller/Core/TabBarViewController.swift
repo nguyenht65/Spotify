@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
         let libraryController = LibraryViewController()
         
         //set tabbar title
-        homeController.title = "Browse"
+//        homeController.title = "Browse"
         searchController.title = "Search"
         libraryController.title = "Library"
         
