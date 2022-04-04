@@ -29,6 +29,10 @@ class TabBarViewController: UITabBarController {
         let searchNavigation = UINavigationController(rootViewController: searchController)
         let libraryNavigation = UINavigationController(rootViewController: libraryController)
         
+        homeNavigation.navigationBar.tintColor = .label
+        searchNavigation.navigationBar.tintColor = .label
+        libraryNavigation.navigationBar.tintColor = .label
+        
         //set tabbar icon
         homeController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         searchNavigation.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
