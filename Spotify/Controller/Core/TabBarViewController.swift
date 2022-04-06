@@ -18,8 +18,8 @@ class TabBarViewController: UITabBarController {
         
         //set tabbar title
 //        homeController.title = "Browse"
-        searchController.title = "Search"
-        libraryController.title = "Library"
+//        searchController.title = "Search"
+//        libraryController.title = "Library"
         
         homeController.navigationItem.largeTitleDisplayMode = .always
         searchController.navigationItem.largeTitleDisplayMode = .always

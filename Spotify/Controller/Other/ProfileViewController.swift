@@ -39,9 +39,11 @@ class ProfileViewController: UIViewController {
                 switch result {
                 case .success(let model):
                     self?.updateUI(with: model)
+                    break;
                 case .failure(let error):
                     print("Profile error: \(error.localizedDescription)")
                     self?.failedToGetProfile()
+                    break;
                 }
             }
         }
