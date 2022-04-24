@@ -43,6 +43,8 @@
 		36794B532805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B522805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift */; };
 		36794B552805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B542805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift */; };
 		36794B57280600E700C5EBEB /* NewReleasesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B56280600E700C5EBEB /* NewReleasesCellViewModel.swift */; };
+		36CDFF0928152F8C004433B1 /* FeaturedPlaylistCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CDFF0828152F8C004433B1 /* FeaturedPlaylistCellViewModel.swift */; };
+		36CDFF0B28152FAF004433B1 /* RecommendedTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CDFF0A28152FAF004433B1 /* RecommendedTrackCellViewModel.swift */; };
 		5C6598F7E4B724ADBE1889B1 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DEC3D5030F244EA1263D6D /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		36794B522805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		36794B542805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		36794B56280600E700C5EBEB /* NewReleasesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCellViewModel.swift; sourceTree = "<group>"; };
+		36CDFF0828152F8C004433B1 /* FeaturedPlaylistCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCellViewModel.swift; sourceTree = "<group>"; };
+		36CDFF0A28152FAF004433B1 /* RecommendedTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCellViewModel.swift; sourceTree = "<group>"; };
 		83DEC3D5030F244EA1263D6D /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB22DCDEB04BF1C7A46F0471 /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				36794B56280600E700C5EBEB /* NewReleasesCellViewModel.swift */,
+				36CDFF0828152F8C004433B1 /* FeaturedPlaylistCellViewModel.swift */,
+				36CDFF0A28152FAF004433B1 /* RecommendedTrackCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				365390E227FDFBC100BB3A6E /* Image.swift in Sources */,
 				3646267927F8BFD2009599F6 /* Track.swift in Sources */,
 				3646266327F8BEA3009599F6 /* AuthViewController.swift in Sources */,
+				36CDFF0928152F8C004433B1 /* FeaturedPlaylistCellViewModel.swift in Sources */,
 				365390DE27FB3C7B00BB3A6E /* SettingModel.swift in Sources */,
 				3646266727F8BEC3009599F6 /* SettingViewController.swift in Sources */,
 				365390EA27FE215100BB3A6E /* AvailableGenresResponse.swift in Sources */,
@@ -392,6 +399,7 @@
 				365390E427FDFDDE00BB3A6E /* ExternalUrls.swift in Sources */,
 				3646267D27F8BFEC009599F6 /* UserProfile.swift in Sources */,
 				3646266D27F8BEE4009599F6 /* PlaylistViewController.swift in Sources */,
+				36CDFF0B28152FAF004433B1 /* RecommendedTrackCellViewModel.swift in Sources */,
 				3646267B27F8BFE0009599F6 /* Artist.swift in Sources */,
 				3646265F27F8BE46009599F6 /* LibraryViewController.swift in Sources */,
 				36794B57280600E700C5EBEB /* NewReleasesCellViewModel.swift in Sources */,

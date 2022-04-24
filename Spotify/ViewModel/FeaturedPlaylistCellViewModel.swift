@@ -8,5 +8,7 @@
 import Foundation
 
 struct FeaturedPlaylistCellViewModel {
-    <#fields#>
+    let name: String
+    let artworkURL: URL?
+    let creatorName: String
 }

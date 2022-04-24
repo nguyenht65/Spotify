@@ -9,8 +9,8 @@ import UIKit
 
 enum BrowseSectionType {
     case newReleases(viewModels: [NewReleasesCellViewModel]) // 1
-    case featuredPlaylist(viewModels: [NewReleasesCellViewModel]) // 2
-    case recommendedTracks(viewModels: [NewReleasesCellViewModel]) // 3
+    case featuredPlaylist(viewModels: [FeaturedPlaylistCellViewModel]) // 2
+    case recommendedTracks(viewModels: [RecommendedTrackCellViewModel]) // 3
 }
 
 class HomeViewController: UIViewController {
@@ -36,9 +36,9 @@ class HomeViewController: UIViewController {
         title = "Browse"
         view.backgroundColor = .systemBackground
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(didTapSetting))
-        
-        view.addSubview(spinner)
+
         configureCollectionView()
+        view.addSubview(spinner)
         fetchData()
     }
     
@@ -237,8 +237,16 @@ class HomeViewController: UIViewController {
                                             numberOfTracks: $0.totalTracks,
                                             artistName: $0.artists.first?.name ?? "Unknow")
         })))
-        sections.append(.newReleases(viewModels: []))
-        sections.append(.newReleases(viewModels: []))
+        sections.append(.featuredPlaylist(viewModels: playlists.compactMap({
+            return FeaturedPlaylistCellViewModel(name: $0.name,
+                                                 artworkURL: URL(string: $0.images.first?.url ?? ""),
+                                                 creatorName: $0.owner.displayName)
+        })))
+        sections.append(.recommendedTracks(viewModels: tracks.compactMap({
+            return RecommendedTrackCellViewModel(name: $0.name,
+                                                 artworkURL: URL(string: $0.album.images.first?.url ?? ""),
+                                                 artistName: $0.artists.first?.name ?? "Unknow")
+        })))
         
         collectionView.reloadData()
     }
@@ -284,7 +292,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return UICollectionViewCell()
             }
             let viewModel = viewModels[indexPath.row]
-            cell.backgroundColor = .blue
+            cell.configure(with: viewModel)
             return cell
         case .recommendedTracks(let viewModels):
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedTrackCollectionViewCell.identifier, for: indexPath) as? RecommendedTrackCollectionViewCell else {

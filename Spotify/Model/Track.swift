@@ -23,8 +23,7 @@ struct Track: Codable {
     let previewURL: String?
     let trackNumber: Int
     let type, uri: String
-
-
+    
     enum CodingKeys: String, CodingKey {
         case album, artists
         case availableMarkets = "available_markets"
