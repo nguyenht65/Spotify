@@ -299,7 +299,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return UICollectionViewCell()
             }
             let viewModel = viewModels[indexPath.row]
-            cell.backgroundColor = .orange
+            cell.configure(with: viewModel)
             return cell
         }
     }
