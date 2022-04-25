@@ -15,6 +15,10 @@ enum BrowseSectionType {
 
 class HomeViewController: UIViewController {
     
+    private var newAlbums: [Album] = []
+    private var playlists: [Playlist] = []
+    private var tracks: [Track] = []
+    
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection in
@@ -231,6 +235,10 @@ class HomeViewController: UIViewController {
     }
     
     private func configureModels(newAlbums: [Album], playlists: [Playlist], tracks: [Track]) {
+        self.newAlbums = newAlbums
+        self.playlists = playlists
+        self.tracks = tracks
+        
         sections.append(.newReleases(viewModels: newAlbums.compactMap({
             return NewReleasesCellViewModel(name: $0.name,
                                             artworkURL: URL(string: $0.images.first?.url ?? ""),
@@ -244,7 +252,7 @@ class HomeViewController: UIViewController {
         })))
         sections.append(.recommendedTracks(viewModels: tracks.compactMap({
             return RecommendedTrackCellViewModel(name: $0.name,
-                                                 artworkURL: URL(string: $0.album.images.first?.url ?? ""),
+                                                 artworkURL: URL(string: $0.album?.images.first?.url ?? ""),
                                                  artistName: $0.artists.first?.name ?? "Unknow")
         })))
         
@@ -286,7 +294,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let viewModel = viewModels[indexPath.row]
             cell.configure(with: viewModel)
             return cell
-            
         case .featuredPlaylist(let viewModels):
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedPlaylistCollectionViewCell.identifier, for: indexPath) as? FeaturedPlaylistCollectionViewCell else {
                 return UICollectionViewCell()
@@ -304,5 +311,24 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let section = sections[indexPath.section]
+        switch section {
+        case .newReleases:
+            let album = newAlbums[indexPath.row]
+            let viewController = AlbumViewController(album: album)
+            viewController.title = album.name
+            viewController.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(viewController, animated: true)
+        case .featuredPlaylist:
+            let playlist = playlists[indexPath.row]
+            let viewController = PlaylistViewController(playlist: playlist)
+            viewController.title = playlist.name
+            viewController.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(viewController, animated: true)
+        case .recommendedTracks:
+            break
+        }
+    }
 }

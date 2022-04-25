@@ -68,8 +68,8 @@ class ProfileViewController: UIViewController {
             return
         }
         
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width/1.5))
-        let imageSize: CGFloat = headerView.height/2
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width / 1.5))
+        let imageSize: CGFloat = headerView.height / 2
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
         headerView.addSubview(imageView)
         imageView.center = headerView.center
@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController {
         imageView.sd_setImage(with: url, completed: nil)
         
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = imageSize/2
+        imageView.layer.cornerRadius = imageSize / 2
         tableView.tableHeaderView = headerView
     }
     
@@ -105,6 +105,5 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentConfiguration = config
         return cell
     }
-    
     
 }
