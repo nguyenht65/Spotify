@@ -13,7 +13,7 @@ class PlaylistViewController: UIViewController {
     
     private let collectionView = UICollectionView(
         frame: .zero,
-        collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { _, _ -> NSCollectionLayoutSection in
+        collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { _, _ in
             let item = NSCollectionLayoutItem(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                    heightDimension: .fractionalHeight(1.0)))

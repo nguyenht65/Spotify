@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
-        collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection in
+        collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ in
             return HomeViewController.createSectionLayout(sectionIndex: sectionIndex)
         }
     )
