@@ -44,6 +44,8 @@
 		36715881281A703900C0CD7C /* PlaylistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715880281A703900C0CD7C /* PlaylistResponse.swift */; };
 		36715883281A727500C0CD7C /* CategoryCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715882281A727500C0CD7C /* CategoryCollectionViewCellViewModel.swift */; };
 		36715885281A74A000C0CD7C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715884281A74A000C0CD7C /* CategoryViewController.swift */; };
+		36715887281A889800C0CD7C /* SearchResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715886281A889800C0CD7C /* SearchResultsResponse.swift */; };
+		36715889281A917B00C0CD7C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36715888281A917B00C0CD7C /* SearchResult.swift */; };
 		36794B512805FDFC00C5EBEB /* NewReleasesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B502805FDFC00C5EBEB /* NewReleasesCollectionViewCell.swift */; };
 		36794B532805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B522805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift */; };
 		36794B552805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36794B542805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift */; };
@@ -103,6 +105,8 @@
 		36715880281A703900C0CD7C /* PlaylistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistResponse.swift; sourceTree = "<group>"; };
 		36715882281A727500C0CD7C /* CategoryCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		36715884281A74A000C0CD7C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		36715886281A889800C0CD7C /* SearchResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsResponse.swift; sourceTree = "<group>"; };
+		36715888281A917B00C0CD7C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		36794B502805FDFC00C5EBEB /* NewReleasesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCollectionViewCell.swift; sourceTree = "<group>"; };
 		36794B522805FE2A00C5EBEB /* FeaturedPlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		36794B542805FE4500C5EBEB /* RecommendedTrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				367FC2E3281688FE002FED4F /* PlaylistDetailsResponse.swift */,
 				3671587C281A6BF700C0CD7C /* AllCategoriesResponse.swift */,
 				3671587E281A6FB500C0CD7C /* CategoryPlaylistsResponse.swift */,
+				36715886281A889800C0CD7C /* SearchResultsResponse.swift */,
+				36715888281A917B00C0CD7C /* SearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,9 +463,11 @@
 				3646267B27F8BFE0009599F6 /* Artist.swift in Sources */,
 				3646265F27F8BE46009599F6 /* LibraryViewController.swift in Sources */,
 				367FC2EA28193273002FED4F /* TittleHeaderCollectionReusableView.swift in Sources */,
+				36715887281A889800C0CD7C /* SearchResultsResponse.swift in Sources */,
 				36794B57280600E700C5EBEB /* NewReleasesCellViewModel.swift in Sources */,
 				3646266B27F8BED6009599F6 /* PlayerViewController.swift in Sources */,
 				3646266F27F8BEF7009599F6 /* SearchResultsViewController.swift in Sources */,
+				36715889281A917B00C0CD7C /* SearchResult.swift in Sources */,
 				3646267327F8BF3B009599F6 /* APICaller.swift in Sources */,
 				3646264327F8AD56009599F6 /* SceneDelegate.swift in Sources */,
 				3646267F27F8D1B2009599F6 /* Extentions.swift in Sources */,
