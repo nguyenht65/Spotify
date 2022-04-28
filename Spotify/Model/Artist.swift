@@ -12,12 +12,13 @@ struct Artist: Codable {
     //    let followers: Followers
     //    let genres: [String]
     let id: String
-    //    let images: [Image]
+    let images: [Image]?
     let name: String
     //    let popularity: Int
     
     enum CodingKeys: String, CodingKey {
         case externalUrls = "external_urls"
         case id, name
+        case images
     }
 }
