@@ -124,23 +124,23 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
 extension SearchViewController: SearchResultsViewControllerDelegate {
     func didTapResult(_ result: SearchResult) {
         switch result {
-        case .artist(model: let model):
-            guard let url = URL(string: model.externalUrls.spotify) else {
+        case .artist(let artirst):
+            guard let url = URL(string: artirst.externalUrls.spotify) else {
                 return
             }
             let viewController = SFSafariViewController(url: url)
             present(viewController, animated: true)
             
-        case .album(model: let album):
+        case .album(let album):
             let viewController = AlbumViewController(album: album)
             viewController.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(viewController, animated: true)
-        case .playlist(model: let playlist):
+        case .playlist(let playlist):
             let viewController = PlaylistViewController(playlist: playlist)
             viewController.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(viewController, animated: true)
-        case .track(model: let track):
-            break
+        case .track(let track):
+            PlaybackPresenter.startPlayback(from: self, track: track)
         }
     }
 }
