@@ -13,7 +13,7 @@ struct Album: Codable {
     let availableMarkets: [String]
     let externalUrls: ExternalUrls
     let id: String
-    let images: [Image]
+    var images: [Image]
     let name, releaseDate, releaseDatePrecision: String
     //    let restrictions: Restrictions
     let artists: [Artist]

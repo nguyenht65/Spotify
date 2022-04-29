@@ -76,6 +76,10 @@ class PlayerViewController: UIViewController {
     @objc private func didTapAction() {
         //action
     }
+    
+    func refreshUI() {
+        configure()
+    }
 }
 
 extension PlayerViewController: PLayerControlsViewDelegate {
