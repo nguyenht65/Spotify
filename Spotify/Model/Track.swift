@@ -18,6 +18,7 @@ struct Track: Codable {
 //    let isPlayable: Bool
     let isLocal: Bool
     let name: String
+    let previewURL: String?
     let popularity: Int?
     let trackNumber: Int
     
@@ -32,6 +33,7 @@ struct Track: Codable {
 //        case isPlayable = "is_playable"
         case isLocal = "is_local"
         case name, popularity
+        case previewURL = "preview_url"
         case trackNumber = "track_number"
     }
 }
