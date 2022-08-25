@@ -1,3 +1,3 @@
 # Spotify
-Spotify App By NguyenHT
+Spotify App Clone By Me
 (Not done yet)
